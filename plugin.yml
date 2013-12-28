@@ -1,0 +1,44 @@
+name: Greek God Essentials
+main: me.ksmit799197.gge.Main
+version: 1.1
+description: A fun plugin for a Greek themed/God related server.
+
+commands:
+  setwp:
+    description: Set's a personal warp
+  tpwp:
+    description: Teleport's you to your personal warp
+  ggeinfo:
+  	description: Gives you information on the Greek God Essentials you have installed
+  feed:
+  	description: Feed yourself and others
+  heal:
+  	description: Heal yourself and others
+  starve:
+  	description: Starve yourself and others
+  ignite:
+  	description: Ignite yourself and others
+  slap:
+  	description: Slap yourself and others
+  kill:
+  	description: Kill yourself and others
+
+permissions:
+  gge.tpwp:
+    description: Allows you to use the command /tpwp
+  gge.setwp:
+    description: Allows you to use the command /setwp
+  gge.info:
+    description: Allows you to use the command /ggeinfo
+  gge.feed
+    description: Allows you to use the command /feed
+  gge.heal
+    description: Allows you to use the command /heal
+  gge.starve:
+  	description: Allows you to use the command /starve
+  gge.ignite:
+  	description: Allows you to use the command /ignite
+  gge.slap:
+  	description: Allows you to use the command /slap
+  gge.kill:
+  	description: Allows you to use the command /kill
