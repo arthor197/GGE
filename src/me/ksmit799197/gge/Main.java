@@ -2,6 +2,9 @@ package me.ksmit799197.gge;
 
 import java.util.logging.Logger;
 
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -27,10 +30,19 @@ public class Main extends JavaPlugin{
 		saveConfig();
 	}
 	
+	public void MossyCobble() {
+		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.MOSSY_COBBLESTONE, 1));
+		recipe.shape("AAA", "ABA", "AAA");
+		recipe.setIngredient('A', Material.VINE);
+		recipe.setIngredient('B', Material.COBBLESTONE);
+		this.getServer().addRecipe(recipe);
+		}
+	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args){
 		if(sender instanceof Player){
 			Player player = (Player) sender;
+			Block blockignite = player.getTargetBlock(null, 10000);
 
 			//Commands
 
@@ -196,7 +208,7 @@ public class Main extends JavaPlugin{
 					
 				}
 				else{
-					player.sendMessage(ChatColor.RED + "[GGE    ERROR] You don't have permission to do this!");
+					player.sendMessage(ChatColor.RED + "[ERROR] You don't have permission to do this!");
 				}
 			}
 		}return false;
